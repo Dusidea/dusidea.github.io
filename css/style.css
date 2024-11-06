@@ -58,6 +58,51 @@ a {
     color: var(--main-bg-color)
 }
 
+
+
+
+
+
+/* Ajout de propriétés sur le header pour afficher le logo à gauche et les boutons de nav à droite (justify). la direction est row par défaut*/
+header {
+    display: flex;
+    justify-content: space-between;
+
+}
+/*Ajout de propriété sur les boutons pour espacement ??*/
+.button{
+       margin-left: 68px; /*le gap est de 68px sur les versions desktop, mobile et large desktop*/
+}
+/*Ajout de propriété sur les boutons pour le comportement au hover.*/
+.button:hover {
+    border-top: 3px var(--main-color) solid;
+    color: var(--main-color);
+}
+/*Ajout de propriété sur nav pour que les boutons s'affichent cote à cote, en flex*/
+nav {
+    display : flex;
+   /* justify-content: space-between; ne semble avoir aucune impact, où commence le bloc nav par rapport au header ? pourquoi ça ne fonctionne pas ? 
+   c'est pourtant bien ici, si j'enlève display flex, les boutons se retrouvent l'un en dessous de l'autre  */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
