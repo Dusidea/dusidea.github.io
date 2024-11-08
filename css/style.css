@@ -16,6 +16,7 @@
 body {
     display: flex;
     justify-content: center;
+    margin: 0px; /*ajouté pour supprimer la marge présente par défaut sur la balise body*/
 }
 
 .main-container {
@@ -33,6 +34,7 @@ a {
 .section-title {
     margin: 0;
     font-size: 22px;
+    /* ajouter une propriété background color pour changer la couleur de fond ici grise doit devenir blanc */
 }
 
 .card {
@@ -63,25 +65,35 @@ a {
 
 
 
+
 /* Ajout de propriétés sur le header pour afficher le logo à gauche et les boutons de nav à droite (justify). la direction est row par défaut*/
 header {
     display: flex;
     justify-content: space-between;
-
+    padding-right: 50px; 
+    padding-left: 50px; 
 }
+/* les paddings ne sont pas les mêmes pour le logo et les boutons, je fais donc une classe spécifique pour le logo*/
+.logo {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
 /*Ajout de propriété sur les boutons pour espacement ??*/
 .button{
-       margin-left: 68px; /*le gap est de 68px sur les versions desktop, mobile et large desktop*/
+      margin-left: 68px; /* le gap est de 68px sur les versions desktop, mobile et large desktop*/
+     
 }
 /*Ajout de propriété sur les boutons pour le comportement au hover.*/
 .button:hover {
-    border-top: 3px var(--main-color) solid;
+    border-top: 2px var(--main-color) solid;
     color: var(--main-color);
 }
 /*Ajout de propriété sur nav pour que les boutons s'affichent cote à cote, en flex*/
 nav {
     display : flex;
-   /* justify-content: space-between; ne semble avoir aucune impact, où commence le bloc nav par rapport au header ? pourquoi ça ne fonctionne pas ? 
+    
+    /* justify-content: space-between; ne semble avoir aucune impact, où commence le bloc nav par rapport au header ? pourquoi ça ne fonctionne pas ? 
    c'est pourtant bien ici, si j'enlève display flex, les boutons se retrouvent l'un en dessous de l'autre  */
 }
 
@@ -106,6 +118,7 @@ nav {
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
+    flex-direction: column; /*ajouté pour afficher les blocs en dessous au lieu d'en ligne*/
     justify-content: space-between;
 }
 
@@ -209,4 +222,40 @@ nav {
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
     /* ... */
+
+    /* Ajout de propriétés sur le header pour afficher le logo en haut au centre et les boutons de nav en dessous */
+    header {
+        display: flex;
+        flex-direction: column;/* permet d'avoir le logo au dessus du bloc nav*/
+        align-items: center;    /* permet d'avoir le logo au centre sur la largeur */
+       
+    }    
+
+    .logo{
+        padding: 30px; /* permet d'avoir le logo au centre en hauter mais on met un padding pour tout le bloc header, pas pour le logo seul*/
+        justify-content: center;
+    }
+
+    /*Ajout de propriété sur nav pour que les boutons s'affichent cote à cote, en flex*/
+    nav {
+        display : flex;
+         /* justify-content: flex-start;   */
+        /* align-items:center;       */
+    }
+    /*Ajout de propriété sur les boutons pour espacement ??*/
+    .button{
+       padding-left: 68px; 
+       padding-right: 68px; 
+        /* margin-top: 30px; */
+        /* margin-bottom: 30px */
+        /* height: 19px; */
+        /*le gap est de 68px sur les versions desktop-ha bon ???-, mobile et large desktop*/
+    }
+
+    /*Ajout de propriété sur les boutons pour le comportement au hover.*/
+    .button:hover {
+        border-bottom: 2px var(--main-color) solid;
+        border-top: 0px var(--main-bg-color) solid;
+        color: var(--main-color);
+    }
 }
