@@ -16,7 +16,8 @@
 body {
     display: flex;
     justify-content: center;
-    margin: 0px; /*ajouté pour supprimer la marge présente par défaut sur la balise body*/
+  /* margin: 0px; ajouté pour supprimer la marge présente par défaut sur la balise body*/
+    
 }
 
 .main-container {
@@ -24,6 +25,7 @@ body {
     max-width: 1440px;
     padding: 0 50px;
     box-sizing: border-box;
+   
 }
 
 a {
@@ -223,33 +225,50 @@ nav {
 @media (max-width: 767.98px) {
     /* ... */
 
+   
+   
+
+
+   
+
     /* Ajout de propriétés sur le header pour afficher le logo en haut au centre et les boutons de nav en dessous */
     header {
         display: flex;
         flex-direction: column;/* permet d'avoir le logo au dessus du bloc nav*/
-        align-items: center;    /* permet d'avoir le logo au centre sur la largeur */
-       
+        align-items: center;    /* permet d'avoir le logo au centre sur la largeur */  
+        /* justify-content: safe-center; */
+        padding-right: 0px;  /* permet de neutraliser le padding indiquer sur la partie desktop */  
+        padding-left: 0px;       /* permet de neutraliser le padding indiquer sur la partie desktop */  
+       /* width: 100vw;  si je demande fit content, se décale sur le coté, on voit que le header 
+        n'occupe toujours pas tout l'espace mais il n'est plus centré, idem si je mets 100vw*/
+        margin: 0px;
+        max-width: none;
+        box-sizing: border-box;
+        overflow-x: hidden;
     }    
 
     .logo{
-        padding: 30px; /* permet d'avoir le logo au centre en hauter mais on met un padding pour tout le bloc header, pas pour le logo seul*/
+       /* padding: 30px;  permet d'avoir le logo au centre en hauter mais on met un padding pour tout le bloc header, pas pour le logo seul*/
         justify-content: center;
     }
 
     /*Ajout de propriété sur nav pour que les boutons s'affichent cote à cote, en flex*/
     nav {
         display : flex;
-         /* justify-content: flex-start;   */
-        /* align-items:center;       */
+        /* width: 100%; */
+         /* justify-content: center;   */
+         /* align-items: flex-start; */
+         /* padding: 0px; */
+        
     }
     /*Ajout de propriété sur les boutons pour espacement ??*/
     .button{
-       padding-left: 68px; 
+        padding-left: 68px; 
        padding-right: 68px; 
-        /* margin-top: 30px; */
-        /* margin-bottom: 30px */
-        /* height: 19px; */
-        /*le gap est de 68px sur les versions desktop-ha bon ???-, mobile et large desktop*/
+       padding-bottom: 15px; 
+       margin: 0px;
+       border-bottom: 2px var(--main-bg-color) solid;
+     
     }
 
     /*Ajout de propriété sur les boutons pour le comportement au hover.*/
@@ -258,4 +277,14 @@ nav {
         border-top: 0px var(--main-bg-color) solid;
         color: var(--main-color);
     }
+ 
+    
+    .section-title{
+        background-color: white; /*ajouté pour supprimer le fond de la section titre, en vain*/
+    }
+
+
+
+
+ 
 }
