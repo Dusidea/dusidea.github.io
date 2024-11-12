@@ -65,9 +65,6 @@ a {
 
 
 
-
-
-
 /* Ajout de propriétés sur le header pour afficher le logo à gauche et les boutons de nav à droite (justify). la direction est row par défaut*/
 header {
     display: flex;
@@ -99,8 +96,14 @@ nav {
    c'est pourtant bien ici, si j'enlève display flex, les boutons se retrouvent l'un en dessous de l'autre  */
 }
 
-
-
+/*Ajout de classe recherche pour gérer la structure logo, champ de recherche, bouton d'envoi*/
+.recherche{
+    display: flex;
+    flex-direction: row;
+    border : 1px solid var(--main-bg-color);
+    border-radius: 15px;
+   
+}
 
 
 
