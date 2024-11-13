@@ -7,7 +7,7 @@
     <title>Booki</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
     <!-- la police est déjà importée ? je comprends pas "Importez les variantes de la police Raleway depuis Google Fonts. (...)
      "Vous n’avez pas besoin d’importer les polices de caractères (Google Fonts et Font Awesome) 
      car elles le sont déjà dans le fichier index.html fourni (vous pouvez les repérer en haut du fichier dans les balises <link>;)." Ben d'accord alors" -->
@@ -23,20 +23,22 @@
             <!-- j'ai besoin ici d'un bloc horizontal, 
              en 1 un logo Booki, en 2 un 2e bloc ? 
                 divisé en case 1 Hébergements, 2 "activités" qui seront des liens type encre ? -->
-            <img src="./images/logo/Booki.png" alt="logo Booki">
+            <img class="logo" src="./images/logo/Booki.png" alt="logo Booki" width="61px" height="19px">
+            <!--spécification des dimensions du logo en fixe (idem sur tous les devices)-->
             <nav>
                 <a class="button" href="#sectionhebergement">Hébergements</a>
                 <a class="button" href="#sectionactivites">Activités</a>
             </nav>
         </header>
         <main>
+            <section class="section-title">
+                <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+                <!-- Ici le formulaire de recherche -->
+            </section>
             <div class="hebergements-and-populaires">
-                <section class="section-title">
-                    <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
-                </section>
-                
                 <section class="hebergements">
-                    <h2 id="sectionhebergement">Hébergements</h2>
+                    <h2 id="sectionhebergement">Hébergements à Marseille</h2>
+                    <!-- Ici les vignettes x6 + un bouton afficher plus -->
                     <p>blablabla</p>
                 </section>
                 <section class="populaires">
@@ -47,7 +49,8 @@
                     <div class="populaires-cards">
                         <a href="#">
                             <article class="card">
-                                <img src="./images/hebergements/emile-guillemot.jpg" alt="Image de la chambre d'hôtel montrant un lit">
+                                <img src="./images/hebergements/emile-guillemot.jpg"
+                                    alt="Image de la chambre d'hôtel montrant un lit">
                                 <div class="card-content">
                                     <div class="card-txt">
                                         <h3 class="card-title">Hôtel Le soleil du matin</h3>
@@ -66,7 +69,8 @@
                         </a>
                         <a href="#">
                             <article class="card">
-                                <img src="./images/hebergements/aw-creative.jpg" alt="Image de la chambre d'hôtel montrant un lit">
+                                <img src="./images/hebergements/aw-creative.jpg"
+                                    alt="Image de la chambre d'hôtel montrant un lit">
                                 <div class="card-content">
                                     <div class="card-txt">
                                         <h3 class="card-title">Chambres d’hôtes Au cœur de l’eau</h3>
@@ -85,7 +89,8 @@
                         </a>
                         <a href="#">
                             <article class="card">
-                                <img src="./images/hebergements/febrian-zakaria2.jpg" alt="Image de la chambre d'hôtel montrant un lit">
+                                <img src="./images/hebergements/febrian-zakaria2.jpg"
+                                    alt="Image de la chambre d'hôtel montrant un lit">
                                 <div class="card-content">
                                     <div class="card-txt">
                                         <h3 class="card-title">Hôtel Bleu et Blanc</h3>
@@ -105,8 +110,8 @@
                     </div>
                 </section>
             </div>
-             <!-- ajouter ici la section activités -->
-                <h2 id="sectionactivites">Activités à Marseille</h2>
+            <!-- ajouter ici la section activités -->
+            <h2 id="sectionactivites">Activités à Marseille</h2>
             <div>
 
             </div>
