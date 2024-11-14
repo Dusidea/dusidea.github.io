@@ -96,12 +96,6 @@ nav {
    c'est pourtant bien ici, si j'enlève display flex, les boutons se retrouvent l'un en dessous de l'autre  */
 }
 
-/* .headline{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-} */
-
 #logo_localisation {
     background-color : var(--main-bg-color);
     border-radius: 15px 0px 0px 15px ;
@@ -146,13 +140,31 @@ nav {
 /* permet de forcer la couleur du texte du placeholder */
 ::placeholder{
     color: black;
- 
 }
 
-form {
+.searchbar {
     display: flex;
     padding: 15px 0px 15px 0px;
 }   
+
+.filter{
+    display: flex;
+    /* flex-direction: row; */
+    align-items: center;
+    padding-top: 15px ;
+    padding-bottom: 15px ;
+}
+
+.filter_button{
+    display: flex;
+    /* justify-content: space-between; pas d'impact ? */
+    border-radius: 25px;
+    border: 2px solid var(--main-bg-color);
+    padding: 4px 19px 4px 19px;
+    margin: 7.5px;
+    gap: 10px;
+}
+
 
 .subinfo{
     display: flex;

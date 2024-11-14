@@ -34,13 +34,31 @@
                 <h2 class="section-title">Trouvez votre hébergement pour des vacances de rêve</h2>   
                     <p style="margin-block-start: 8px;">En plein centre-ville ou en pleine nature</p>
                     <!-- force un style de marge pour appliquer le gap entre titre et sous titre  -->            
-                <form method="get" action=""><!-- Ici le formulaire de recherche -->
-                    <img id="logo_localisation" src="/images/Vector.svg"><!-- ici l'icone vecteur ? -->
+                <form class="searchbar" method="get" action=""><!-- Ici le formulaire de recherche -->
+                    <img id="logo_localisation" src="/images/location.svg"><!-- ici l'icone vecteur ? -->
                     <input id="location" type="text" name="location" required placeholder="Marseille, France">
                     <input id="bouton" type="submit" value="Rechercher">
                 </form>
-                <!-- Ici les filtres -->
-                
+                <div class="filter">
+                    <h3>Filtres</h3>
+                    <!-- je ne sais pas si h3 est approprié, je n'arrive pas à voir la taille de police (maquette : s18 w700) -->
+                    <div class="filter_button">
+                        <img src="/images/price.svg" alt="Économique">
+                        <a>Économique</a>
+                    </div>
+                    <div class="filter_button">
+                        <img src="/images/family.svg" alt="Familial">
+                        <a>Familial</a>
+                    </div>
+                    <div class="filter_button">
+                        <img src="/images/romantic.svg" alt="Romantique">
+                        <a>Romantique</a>
+                    </div>
+                    <div class="filter_button">
+                        <img src="/images/fire.svg" alt="Nos pépites">
+                        <a>Nos pépites</a>
+                    </div>
+                </div>
                 <div class="subinfo">
                     <img id="iconeinfo" src="/images/infoicon.svg" alt="icone info">
                     <img id="ellipse" src="/images/Ellipse 11.svg" alt="ellipse icone info">
