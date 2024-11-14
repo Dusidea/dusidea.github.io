@@ -96,19 +96,11 @@ nav {
    c'est pourtant bien ici, si j'enlève display flex, les boutons se retrouvent l'un en dessous de l'autre  */
 }
 
-/*Ajout de classe searchbar pour gérer la structure logo, champ de recherche, bouton d'envoi*/
-.searchbar{
+/* .headline{
     display: flex;
-    flex-direction: row;
-   /* font-size: 18px;  modif de police non prise en compte ? barrée dans l'inspecteur => reportée dans les sélecteurs spécifiques
-    font-weight: 700;*/
-    /* border : 1px solid var(--main-bg-color);
-    border-radius: 15px; */
-    /* padding: 15px 16px 15px 16px; je pige pas pourquoi ça marche pas au global, obligé de mettre en idiv */
-}
-
-
-
+    flex-direction: column;
+    justify-content: space-between;
+} */
 
 #logo_localisation {
     background-color : var(--main-bg-color);
@@ -121,18 +113,23 @@ nav {
 }
 
 #location {    
-    border: 1px solid var(--main-bg-color);
-    /* border-top : 1px solid var(--main-bg-color);
+    /* border: 1px solid var(--main-bg-color); */
+    border-top : 1px solid var(--main-bg-color);
     border-bottom : 1px solid var(--main-bg-color);
     border-left: 0 solid var(--main-bg-color);
-    border-right: 0 solid var(--main-bg-color); y a quand même toujours un écart avec le bouton!!*/
+    border-right: 0 solid var(--main-bg-color);
+    /* y a quand même toujours un écart avec le bouton!!*/
     font-size: 18px; 
     font-weight: 700;
     color: black;
-    text-align: center;
-    /* justify-content: center; */
+    text-align:center;
+    /* justify-content: center;  */
     padding: 15px 16px 15px 16px;
     /* padding-inline: 0; */   
+    /* margin: 0; */
+    /* margin-right: 0; */
+    width: 195px;
+  
 }
 
 #bouton {
@@ -143,27 +140,24 @@ nav {
     padding: 15px 16px 15px 16px;
     font-size: 18px; 
     font-weight: 700;    
+    width: 132px; /*impose la taille de la maquette desk, tablette et largedesk*/
 }
 
 /* permet de forcer la couleur du texte du placeholder */
 ::placeholder{
     color: black;
+ 
 }
 
-#iconeinfo{
-    border: 1px solid var(--main-bg-color);
-    border-radius: 90px;
-    padding: 24px;
-}
+form {
+    display: flex;
+    padding: 15px 0px 15px 0px;
+}   
 
- /* form {
-    margin: 0;
-    padding : 0;
-    border: 0;
-    gap: 0;
-}  */
-
-
+#iconeinfo, #ellipse {
+    position: absolute;
+    left: 68px;  /*body a une marge de 8 et main container a une marge de 50, j'ajoute le 10 px de décalage du i, soit 68 */
+} 
 
 
 

@@ -30,22 +30,23 @@
             </nav>
         </header>
         <main>
-            <section class="headline"> <!-- utile ? -->
-                <h2 class="section-title">Trouvez votre hébergement pour des vacances de rêve</h2>
-                    <!-- gap de 8px entre le h2 et la phrase dessous -->
-                    <p>En plein centre-ville ou en pleine nature</p>
-            </section>
-            <section class="recherche"><!-- doit contenir 3 éléments distincts? image fond gris, champ fond blanc, bouton fond bleu-->
-                <img src="/images/Vector.svg"><!-- ici l'icone vecteur ? -->
-                <form method="get" action="">
-                    <input type="text" name="location" required focus>
-                    <input type="submit" value="Rechercher">
+            <section class="headline"> 
+                <h2 class="section-title">Trouvez votre hébergement pour des vacances de rêve</h2>   
+                    <p style="margin-block-start: 8px;">En plein centre-ville ou en pleine nature</p>
+                    <!-- force un style de marge pour appliquer le gap entre titre et sous titre  -->            
+                <form method="get" action=""><!-- Ici le formulaire de recherche -->
+                    <img id="logo_localisation" src="/images/Vector.svg"><!-- ici l'icone vecteur ? -->
+                    <input id="location" type="text" name="location" required placeholder="Marseille, France">
+                    <input id="bouton" type="submit" value="Rechercher">
                 </form>
-            </section>
-                <!-- Ici le formulaire de recherche -->
-                  <!-- Ici les filtres -->
-                     <!-- Ici l'info "plus de 500 logements' -->
-           
+                <!-- Ici les filtres -->
+                <!-- Ici l'info "plus de 500 logements' -->
+                <p style="margin-block-start: 10px;"> 
+                    <img id="iconeinfo" src="/images/infoicon.svg" alt="icone info">
+                    <img id="ellipse" src="/images/Ellipse 11.svg" alt="ellipse icone info">
+                    Plus de 500 logements sont disponibles dans cette ville
+                </p>
+            </section> 
         </main>
     </div>
 </body>            
