@@ -154,10 +154,24 @@ form {
     padding: 15px 0px 15px 0px;
 }   
 
-#iconeinfo, #ellipse {
-    position: absolute;
-    left: 68px;  /*body a une marge de 8 et main container a une marge de 50, j'ajoute le 10 px de décalage du i, soit 68 */
-} 
+.subinfo{
+    display: flex;
+    margin-top: 10px;
+}
+
+ #ellipse {
+    width: 24px;
+    height: 24px;
+    position: relative; 
+}  
+
+#iconeinfo{
+    width: 4px;
+    height : 10px;
+    position: relative;
+    left : 14px; 
+    top : 5px; 
+}
 
 
 
