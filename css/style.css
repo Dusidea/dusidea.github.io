@@ -63,8 +63,6 @@ a {
 }
 
 
-
-
 /* Ajout de propriétés sur le header pour afficher le logo à gauche et les boutons de nav à droite (justify). la direction est row par défaut*/
 header {
     display: flex;
@@ -195,7 +193,6 @@ nav {
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
-    flex-direction: column; /*ajouté pour afficher les blocs en dessous au lieu d'en ligne*/
     justify-content: space-between;
 }
 
@@ -209,6 +206,30 @@ nav {
 /****** Hebergements ***********/
 .hebergements {
     width: 65%;
+    /* display: flex; */
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+}
+
+.hebergements-cards .card {
+    display: flex;
+    margin-top: 33px;
+} 
+
+.hebergements-cards .img {
+    width: 33%;
+    height: 136px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.hebergements-cards .card-content {
+    width: 67%;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
 }
 
 /****** Populaires ***********/
