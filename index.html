@@ -31,10 +31,41 @@
             </nav>
         </header>
         <main>
-            <section class="section-title">
-                <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
-                <!-- Ici le formulaire de recherche -->
-            </section>
+            <section class="headline"> 
+                <h2 class="section-title">Trouvez votre hébergement pour des vacances de rêve</h2>   
+                    <p style="margin-block-start: 8px;">En plein centre-ville ou en pleine nature</p>
+                    <!-- force un style de marge pour appliquer le gap entre titre et sous titre  -->            
+                <form class="searchbar" method="get" action=""><!-- Ici le formulaire de recherche -->
+                    <img id="logo_localisation" src="/images/location.svg"><!-- ici l'icone vecteur ? -->
+                    <input id="location" type="text" name="location" required placeholder="Marseille, France">
+                    <input id="bouton" type="submit" value="Rechercher">
+                </form>
+                <div class="filter">
+                    <h3>Filtres</h3>
+                    <!-- je ne sais pas si h3 est approprié, je n'arrive pas à voir la taille de police (maquette : s18 w700) -->
+                    <div class="filter_button">
+                        <img class="filter_button_img" src="/images/price.svg" alt="Économique">
+                        <a>Économique</a>
+                    </div>
+                    <div class="filter_button">
+                        <img src="/images/family.svg" alt="Familial">
+                        <a>Familial</a>
+                    </div>
+                    <div class="filter_button">
+                        <img src="/images/romantic.svg" alt="Romantique">
+                        <a>Romantique</a>
+                    </div>
+                    <div class="filter_button">
+                        <img src="/images/fire.svg" alt="Nos pépites">
+                        <a>Nos pépites</a>
+                    </div>
+                </div>
+                <div class="subinfo">
+                    <img id="iconeinfo" src="/images/infoicon.svg" alt="icone info">
+                    <img id="ellipse" src="/images/Ellipse 11.svg" alt="ellipse icone info">
+                    <p style="margin: 0; padding-left: 10px;">Plus de 500 logements sont disponibles dans cette ville</p>
+                </div>
+            </section> 
             <div class="hebergements-and-populaires">
                 <section class="hebergements">
                     <h2 id="sectionhebergement">Hébergements à Marseille</h2>

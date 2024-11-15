@@ -69,8 +69,6 @@ a {
 header {
     display: flex;
     justify-content: space-between;
-    padding-right: 50px; 
-    padding-left: 50px; 
 }
 /* les paddings ne sont pas les mêmes pour le logo et les boutons, je fais donc une classe spécifique pour le logo*/
 .logo {
@@ -172,6 +170,7 @@ nav {
 .subinfo{
     display: flex;
     margin-top: 10px;
+    margin-bottom : 40px;
 }
 
  #ellipse {
