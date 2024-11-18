@@ -249,6 +249,7 @@ nav {
 /* cette section définit le style du contenu de la card (titre, prix, étoiles)*/
 .hebergements-cards .card-content {
     /* width: 67%; */
+    margin-top: 4px;
     padding-left: 15px;
     padding-right: 15px;
     display: flex;
@@ -258,17 +259,17 @@ nav {
 }
 
 .hebergements-cards .card-title {
-    /* margin-top: 10px;
-    margin-bottom: 8px; */
+    margin : 0;
 }
 
 .hebergements-cards .card-subtitle {
-    /* margin: 0; */
+    margin-bottom: 4px;
+    margin-top: 4px;
 }
 
-.hebergements-cards .card-rating {
-    /* margin-bottom: 5px; */
-}
+/* .hebergements-cards .card-rating {
+    margin-top: 4px;
+} */
 
 /****** Populaires ***********/
 .populaires {
