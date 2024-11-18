@@ -207,9 +207,9 @@ nav {
 .hebergements {
     width: 65%;
     display: flex;
-    flex-direction: row;
-    justify-content: center; 
-    align-items: center;
+    flex-direction: column;
+    /* justify-content: flex-start;  */
+    align-items: flex-start;
     /* flex-wrap: wrap; */
 }
 
@@ -219,10 +219,14 @@ nav {
     align-items: center;
 }
 
-/* .hebergements-cards {
+/* section du bloc des 6 cartes*/
+.hebergements-cards {
     display: flex;
     flex-direction: row; 
-}  */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 100%;
+} 
 
 
  /* sélecteur combiné => classe card à l'intérieur d'une balise de classe hebergements-cards
@@ -231,10 +235,9 @@ nav {
 .hebergements-cards .card {
     display: flex;
     margin-top: 33px;
-    flex-direction: column; 
-    /* direction : dispo entre image et texte; verticale donc column*/
-    /* width: 20%; */
-    
+    flex-direction: column; /* direction : dispo entre image et texte; verticale donc column*/
+    max-width: 100%;
+
 } 
 
 /* cette section définit le style de l'image de la card */
@@ -243,7 +246,7 @@ nav {
     height: 124px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    /* object-fit: cover; */
+
 }
 
 /* cette section définit le style du contenu de la card (titre, prix, étoiles)*/
@@ -255,7 +258,9 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    align-items: flex-start;
     box-sizing: border-box;
+    /* overflow: hidden; */
 }
 
 .hebergements-cards .card-title {
