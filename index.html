@@ -32,49 +32,42 @@
                 <h2 class="section-title">Trouvez votre hébergement pour des vacances de rêve</h2>   
                     <p style="margin-block-start: 8px;">En plein centre-ville ou en pleine nature</p>
                     <!-- force un style de marge pour appliquer le gap entre titre et sous titre  -->            
-                <form class="searchbar" method="get" action=""><!-- Ici le formulaire de recherche -->
-                    <img id="logo_localisation" src="/images/location.svg"><!-- ici l'icone vecteur -->
+                <form class="searchbar" method="get" action="">
+                    <i id="logo_localisation" class="fa-solid fa-location-dot"></i>
                     <input id="location" type="text" name="location" required placeholder="Marseille, France">
                     <input id="search-button" type="submit" value="Rechercher">
-                    <input id="search-button-mobile" type="image" id="magnifying_glass" alt="loupe" src="/images/magnifying_glass.svg"><!-- variante mobile  -->
+                    <!-- variante mobile  -->
+                    <!-- <input id="search-button-mobile" type="image" id="magnifying_glass" alt="loupe" src="/images/magnifying_glass.svg"> -->
+                    <button id="search-button-mobile"><i class="fa-solid fa-magnifying-glass" style="color: white;"></i></button>
                 </form>
                 <div class="filter">
                     <div class="filter-title">
-                        <h3 class="not-card-title">Filtres</h3>
-                        
+                        <h3 class="not-card-title">Filtres</h3>   
                     </div>
-                    <!-- je ne sais pas si h3 est approprié, je n'arrive pas à voir la taille de police (maquette : s18 w700) -->
                     <div class = "filter-button-group">
                         <a class="filter-button">
-                            <img class="filter-button-img" src="/images/price.svg" alt="Économique">
-                            <p class="filter-button-text">Économique</p>
+                            <i class="fa-solid fa-money-bill-wave"></i>
+                            Économique
                         </a>
                         <a class="filter-button">
-                            <!-- <img class="filter-button-img" src="/images/family.svg" alt="Familial"> -->
-                            
-                            <!-- <p class="filter-button-text"> -->
-                                <i class="fa-solid fa-person"></i>
-                                Familial
-
-                            <!-- </p> -->
+                            <i class="fa-solid fa-person"></i>
+                            Familial
                         </a>
                         <a class="filter-button">
-                            <img class="filter-button-img" src="/images/romantic.svg" alt="Romantique">
-                            <p class="filter-button-text">Romantique</p>
+                            <i class="fa-solid fa-heart"></i>
+                            Romantique
                         </a>
                         <a class="filter-button">
-                            <img class="filter-button-img" src="/images/fire.svg" alt="Nos pépites">
-                            <p class="filter-button-text">Nos pépites</p>
+                            <i class="fa-solid fa-fire"></i>
+                            Nos pépites
                         </a>
                     </div>    
                 </div>
                 <div class="subinfo">
-                    <img id="iconeinfo" src="images/infoicon.svg" alt="icone info">
-                    <img id="ellipse" src="images/ellipse_11.svg" alt="ellipse icone info">
-                    <p style="margin: 0; padding-left: 10px;">Plus de 500 logements sont disponibles dans cette ville</p>
+                    <i class="fa-solid fa-info"></i>
+                    <p style="margin: 0; margin-block: 0;">Plus de 500 logements sont disponibles dans cette ville</p>
                 </div>
             </section> 
-            
             <div class="hebergements-and-populaires">
                 <section class="hebergements">
                     <div class="hebergements-title">
