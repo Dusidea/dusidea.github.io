@@ -1,12 +1,7 @@
 /****** General ***********/
 * {
     font-family: 'Raleway', sans-serif;
-    box-sizing: border-box;
 }
-
-/* * {
-    border: 1px solid red; /* Facilite la visualisation 
-} */
 
 :root {
     --main-color: #0065FC;
@@ -20,14 +15,17 @@
 
 body {
     display: flex;
-    justify-content: center;    
+    justify-content: center;
+  /* margin: 0px; ajouté pour supprimer la marge présente par défaut sur la balise body*/
+    
 }
 
 .main-container {
     width: 100%;
     max-width: 1440px;
-    min-width: 320px;
     padding: 0 50px;
+    box-sizing: border-box;
+   
 }
 
 a {
@@ -64,10 +62,6 @@ a {
     color: var(--main-bg-color)
 }
 
-.not-card-title{
-    font-size: 18px;
-    margin: 0;
-}
 
 /* Ajout de propriétés sur le header pour afficher le logo à gauche et les boutons de nav à droite (justify). la direction est row par défaut*/
 header {
@@ -93,32 +87,42 @@ header {
 /*Ajout de propriété sur nav pour que les boutons s'affichent cote à cote, en flex*/
 nav {
     display : flex;
+    
+    /* justify-content: space-between; ne semble avoir aucune impact, où commence le bloc nav par rapport au header ? pourquoi ça ne fonctionne pas ? 
+   c'est pourtant bien ici, si j'enlève display flex, les boutons se retrouvent l'un en dessous de l'autre  */
 }
-
 
 #logo_localisation {
     background-color : var(--main-bg-color);
     border-radius: 15px 0px 0px 15px ;
     border : 1px solid var(--main-bg-color);
-    padding: 15px 18px 15px 18px;   
-    color: black;
-    font-size: 18px;
+    /* taille du cadre, pas de l'image
+    width: 50px;
+    height: 49px; */
+    padding: 15px 16px 15px 16px;   
 }
 
 #location {    
+    /* border: 1px solid var(--main-bg-color); */
     border-top : 1px solid var(--main-bg-color);
     border-bottom : 1px solid var(--main-bg-color);
     border-left: 0 solid var(--main-bg-color);
     border-right: 0 solid var(--main-bg-color);
+    /* y a quand même toujours un écart avec le bouton!!*/
     font-size: 18px; 
     font-weight: 700;
     color: black;
     text-align:center;
+    /* justify-content: center;  */
     padding: 15px 16px 15px 16px;
+    /* padding-inline: 0; */   
+    /* margin: 0; */
+    /* margin-right: 0; */
     width: 195px;
+  
 }
 
-#search-button {
+#bouton {
     background-color: var(--main-color);
     color: white;
     border-radius: 0px 15px 15px 0px ;
@@ -127,10 +131,6 @@ nav {
     font-size: 18px; 
     font-weight: 700;    
     width: 132px; /*impose la taille de la maquette desk, tablette et largedesk*/
-}
-
-#search-button-mobile {
-    display: none;
 }
 
 /* permet de forcer la couleur du texte du placeholder */
@@ -151,57 +151,56 @@ nav {
     margin-bottom: 15px ;
 }
 
-.filter-button-group{
+.filter_button{
     display: flex;
-   
-}
-
-.filter-button{
-    display: flex;
+    /* justify-content: space-between; pas d'impact ? */
     border-radius: 25px;
     border: 2px solid var(--main-bg-color);
     padding: 4px 19px 4px 19px;
     margin: 7.5px;
     gap: 10px;
-    font-size: 17px;
-    font-weight: 700;
-    align-items: center;
 }
 
-.filter-button .fa-solid {
-    font-size: 22px;
-}
-
-.filter-button:hover{
+.filter_button:hover{
     background-color: var(--filter-bg-color);
 }
 
-.subinfo {
+.subinfo{
     display: flex;
-    margin-top: 24px;
-    align-items: center;
+    margin-top: 10px;
+    margin-bottom : 40px;
 }
 
-.subinfo .fa-solid {
-    display: flex;
-    border-radius: 50%;
-    /* #D9D9D9 */
-    border : 1px solid #D9D9D9;
-    height: 24px;
+ #ellipse {
     width: 24px;
-    justify-content: center;
-    align-items: center;
-    font-size: 10px;
-    margin-right: 10px; 
+    height: 24px;
+    position: relative; 
+}  
+
+#iconeinfo{
+    width: 4px;
+    height : 10px;
+    position: relative;
+    left : 14px; 
+    top : 5px; 
 }
+
+
+
+
+
 
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
     justify-content: space-between;
-    gap: 40px;
-    margin-top: 35px;
-    margin-bottom: 35px;
+}
+
+.hebergements-and-populaires section {
+    background-color: var(--main-bg-color);
+    border-radius: 20px;
+    padding: 30px;
+    box-sizing: border-box;
 }
 
 /****** Hebergements ***********/
@@ -210,9 +209,10 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 30px;  
-    border-radius: 20px;
-    background-color: var(--main-bg-color);
+    box-sizing: border-box;
+    padding: 30px;
+    
+    
 }
 
 
@@ -235,6 +235,7 @@ nav {
     flex-direction: column; /* direction : dispo entre image et texte; verticale donc column*/
     max-width: 100%;
     width: 100%;
+    box-sizing: border-box;
     height: auto;
     min-width: 250px;
     /* margin-top: 33px; avec ce margin, l'écart entre les deux lignes de card est trop important, j'utilise padding bottom et top sur hebergements-cards*/
@@ -247,6 +248,7 @@ nav {
     height: 124px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;   
+    box-sizing: border-box;
 }
 
 /* cette section définit le style du contenu de la card (titre, prix, étoiles)*/
@@ -259,7 +261,12 @@ nav {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: flex-start;
-    max-width: 100%;   
+    box-sizing: border-box;
+    max-width: 100%;
+    /* overflow: hidden;
+    text-overflow: ellipsis; 
+    white-space: nowrap;   */
+    
 }
 
 .hebergements-cards .card-title {
@@ -275,15 +282,13 @@ nav {
     margin-top: 4px;
 }
 
+/* .hebergements-cards .card-rating {
+    margin-top: 4px;
+} */
 
 /****** Populaires ***********/
 .populaires {
-    width: 32%;  
-    padding: 30px;  
-    border-radius: 20px;
-    background-color: var(--main-bg-color);    
-    display: flex;
-    flex-direction: column;
+    width: 32%;
 }
 
 .populaires-title, .hebergements-title, .activites-title {
@@ -310,6 +315,7 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    box-sizing: border-box;
 }
 
 .populaires-cards .card-title {
@@ -326,68 +332,59 @@ nav {
 }
 
 .activites {
-    padding: 30px; 
+    /* padding: 30px; enlevé pour comprendre le dépassement de la classe activite cards */
     display: flex;
     flex-direction: column;
     max-width: 100%;
-    width: 1340px;
-   
+    width: 100%; 
 }
 
 .activites-cards {
-    padding-top: 33px;
     display: flex;
     max-width: 100%;
-    max-height: 100%;
-    gap: 30px; 
-    flex-wrap: wrap; 
-    height: auto;
-    width: auto;
-    justify-content: space-between;  
+    justify-content: space-between;
+    /* gap: 30px; enlevé pour comprendre le dépassement de la classe activite cards 
+   
+    
+    
+    box-sizing: border-box;
+    /* flex-wrap: wrap; */
+   
 } 
-
-.activites-cards a {
-    flex: 1;  /* chaque élément a une taille égale */ 
-    height: auto;
-}
 
  .activites-cards .card {
    display: flex;
-   flex-direction: column; 
-   height: 100%;
+   max-width: 100%;
+   box-sizing: border-box;
+   flex: 1;
+   margin-top: 33px;
+    flex-direction: column; 
+    width: 100%;
+
 } 
 
-.activites-cards img {
-    width: 100%;
-    height: 380px; /*j'ai trop de souci, je fixe une hauteur en px qui correspond au desktop*/
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-}
+/* .acitivtes-cards .card-title {
+    margin : 0;
+    max-width: 100%;
+    text-overflow: ellipsis; 
+    white-space: nowrap;  
+    overflow: hidden;
+} */
 
-.activites-cards .card-content {
+/* .activite-cards .card-content {
+    /* copié directement from populaires 
     width: 100%;
-    padding: 20px 19px 20px 19px;
+    padding-left: 15px;
     display: flex;
     flex-direction: column;
-}
-
-.activites-cards .card-title {
-    margin: 0;
-}
-
-footer {
-    background-color: var(--main-bg-color);
-    display: flex;
-    margin-top: 35px;
-}
-
-.footer-section{
-    padding: 20px;
-    gap: 15px;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
+    justify-content: space-between;
+    box-sizing: border-box;
+    /* ci-dessous suggéré par IA et ne change rien 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; /* ou "normal" si tu veux plusieurs lignes 
+    
+} */
 
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
@@ -395,12 +392,8 @@ footer {
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
-   
- 
     .hebergements-and-populaires {
         flex-direction: column;
-        width: 100%;
-        gap: 0;
     }
 
     .hebergements {
@@ -416,15 +409,10 @@ footer {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        gap : 20px;
-    }
-
-    .populaires-cards img {
-       height: 146px;
     }
 
     .populaires-cards a {
-        flex:1;
+        width: 30%;
     }
 
     .populaires-cards .card-title {
@@ -434,37 +422,32 @@ footer {
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
-
-    #search-button-mobile {
-        display: none;
-    }
-
-    .activites-cards img {
-        height: 200px;
-    }
-   
-
 }
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
     /* ... */
-    body {
-        margin: 0;
-    } 
 
-    .main-container {
-        padding: 0px;
-    }
+   
+   
+
+
+   
 
     /* Ajout de propriétés sur le header pour afficher le logo en haut au centre et les boutons de nav en dessous */
     header {
         display: flex;
         flex-direction: column;/* permet d'avoir le logo au dessus du bloc nav*/
-        align-items: center;     
-        padding-right: 0px;  /* permet de neutraliser le padding paramétré sur la partie desktop */  
-        padding-left: 0px;       /* permet de neutraliser le padding paramétré sur la partie desktop */  
-        margin: 0px;        
+        align-items: center;    /* permet d'avoir le logo au centre sur la largeur */  
+        /* justify-content: safe-center; */
+        padding-right: 0px;  /* permet de neutraliser le padding indiquer sur la partie desktop */  
+        padding-left: 0px;       /* permet de neutraliser le padding indiquer sur la partie desktop */  
+       /* width: 100vw;  si je demande fit content, se décale sur le coté, on voit que le header 
+        n'occupe toujours pas tout l'espace mais il n'est plus centré, idem si je mets 100vw*/
+        margin: 0px;
+        max-width: none;
+        box-sizing: border-box;
+        overflow-x: hidden;
     }    
 
     .logo{
@@ -475,15 +458,19 @@ footer {
     /*Ajout de propriété sur nav pour que les boutons s'affichent cote à cote, en flex*/
     nav {
         display : flex;
-        width: 100%;        
+        /* width: 100%; */
+         /* justify-content: center;   */
+         /* align-items: flex-start; */
+         /* padding: 0px; */
+        
     }
     /*Ajout de propriété sur les boutons pour espacement ??*/
     .button{
-        padding-bottom: 15px; 
-        margin: 0px;
-        border-bottom: 2px var(--main-bg-color) solid;
-        flex:1;
-        text-align: center;
+        padding-left: 68px; 
+       padding-right: 68px; 
+       padding-bottom: 15px; 
+       margin: 0px;
+       border-bottom: 2px var(--main-bg-color) solid;
      
     }
 
@@ -494,124 +481,13 @@ footer {
         color: var(--main-color);
     }
  
-    .headline {
-        padding-left: 20px ;
-        padding-right: 20px ;
-        padding-top: 30px; /*dédiuis par soustraction h mobile - (h header + h body) */
-    }
     
-  
-
-    .filter{
-        display: flex;
-        align-items: flex-start;
-        padding-bottom: 15px ;
-        margin-bottom: 15px ;
-        flex-direction: column;
-        gap : 20px;
+    .section-title{
+        background-color: white; /*ajouté pour supprimer le fond de la section titre, en vain*/
     }
 
 
-    .filter-button-group {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        font-size: 14px;
-    }
 
-   .filter-button{
-        /* display: flex; */
-        flex: 1;
-        align-items: center;
-    }
 
-    #search-button {
-       display: none;
-    }
-
-    #search-button-mobile {
-        display: flex;
-        background-color: var(--main-color);
-        /* je ne gère pas la couleur ici car fa solid est défini à bleu (main color) au général, autant gérer l'exception dans l'html */
-        border-radius: 15px;
-        border : 1px solid var(--main-color);
-        padding: 15px 16px 15px 16px;
-        font-size: 17px;
-        align-items: center;
-        justify-content: center;
-        filter: drop-shadow(0px 4px 4px #00000040);
-        margin-left: -10px;
-    }
-
-    .hebergements-and-populaires {
-        flex-direction: column-reverse;
-        width: 100%;
-        gap: 0;
-    }
-
-     .hebergements {
-        width: 100%;
-        padding: 20px;
-        border-radius: 0px; 
-        background-color: white;
-    }
-
-    .hebergements-cards a {
-        width: 100%;
-    }
-
-    .populaires {
-        width: 100%;
-        padding: 30px 20px 30px 20px;
-        border-radius: 0px; 
-        margin-top: 0;
-    }
-
-    .populaires-title {
-        max-width: 100%;
-        justify-content: space-around;
-    } 
-
-    .populaires-cards{
-        flex-direction: column;        
-    }
-
-    .populaires-cards a {
-        width: 100%;
-    }
-    
-    .activites-cards {
-        flex-direction: column;
-        gap: 15px;
-    }
-    
-    .activites-cards img {
-        height: 141px;
-    }
-
-    footer {
-        flex-direction: column;
-        padding: 30px;
-        gap: 50px;
-    }
-    
-    .footer-section{
-        padding: 0px;
-    }
-
+ 
 }
-
-/*Ajout d'un message d'erreur pour les écrans inférieurs à la largeur min garantie*/
-@media (max-width: 319px) {
-    body::before {
-      content: "Votre écran est trop petit pour un affichage optimal.";
-      display: block;
-      color: red;
-      text-align: center;
-      padding: 10px;
-      position: fixed;
-      left: 50%;
-      transform: translateX(-50%); /* Centre réellement le message */
-      z-index: 1000;
-    }
-} 

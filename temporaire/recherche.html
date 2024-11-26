@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booki</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- la police est déjà importée ? je comprends pas "Importez les variantes de la police Raleway depuis Google Fonts. (...)
+     "Vous n’avez pas besoin d’importer les polices de caractères (Google Fonts et Font Awesome) 
+     car elles le sont déjà dans le fichier index.html fourni (vous pouvez les repérer en haut du fichier dans les balises <link>;)." Ben d'accord alors" -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="main-container">
+        <header>
+            <!-- j'ai besoin ici d'un bloc horizontal, 
+             en 1 un logo Booki, en 2 un 2e bloc ? 
+                divisé en case 1 Hébergements, 2 "activités" qui seront des liens type encre ? -->
+            <img class="logo" src="./images/logo/Booki.png" alt="logo Booki" width="61px" height="19px">
+            <!--spécification des dimensions du logo en fixe (idem sur tous les devices)-->
+            <nav>
+                <a class="button" href="#sectionhebergement">Hébergements</a>
+                <a class="button" href="#sectionactivites">Activités</a>
+            </nav>
+        </header>
+        <main>
+            <section class="headline"> 
+                <h2 class="section-title">Trouvez votre hébergement pour des vacances de rêve</h2>   
+                    <p style="margin-block-start: 8px;">En plein centre-ville ou en pleine nature</p>
+                    <!-- force un style de marge pour appliquer le gap entre titre et sous titre  -->            
+                <form class="searchbar" method="get" action=""><!-- Ici le formulaire de recherche -->
+                    <img id="logo_localisation" src="/images/location.svg"><!-- ici l'icone vecteur -->
+                    <input id="location" type="text" name="location" required placeholder="Marseille, France">
+                    <input id="search-button" type="submit" value="Rechercher">
+                    <input id="search-button-mobile" type="image" id="magnifying_glass" alt="loupe" src="/images/magnifying_glass.svg"><!-- variante mobile  -->
+                </form>
+                <div class="filter">
+                    <div class="filter-title">
+                        <h3 style="margin: 0;">Filtres</h3>
+                        
+                    </div>
+                    <!-- je ne sais pas si h3 est approprié, je n'arrive pas à voir la taille de police (maquette : s18 w700) -->
+                    <div class = "filter-button-group">
+                        <a class="filter-button">
+                            <img class="filter-button-img" src="/images/price.svg" alt="Économique">
+                            <p class="filter-button-text">Économique</p>
+                        </a>
+                        <a class="filter-button">
+                            <img class="filter-button-img" src="/images/family.svg" alt="Familial">
+                            <p class="filter-button-text">Familial</p>
+                        </a>
+                        <a class="filter-button">
+                            <img class="filter-button-img" src="/images/romantic.svg" alt="Romantique">
+                            <p class="filter-button-text">Romantique</p>
+                        </a>
+                        <a class="filter-button">
+                            <img class="filter-button-img" src="/images/fire.svg" alt="Nos pépites">
+                            <p class="filter-button-text">Nos pépites</p>
+                        </a>
+                    </div>    
+                </div>
+                <div class="subinfo">
+                    <img id="iconeinfo" src="images/infoicon.svg" alt="icone info">
+                    <img id="ellipse" src="images/ellipse_11.svg" alt="ellipse icone info">
+                    <p style="margin: 0; padding-left: 10px;">Plus de 500 logements sont disponibles dans cette ville</p>
+                </div>
+            </section> 
+        </main>
+    </div>
+</body>            
